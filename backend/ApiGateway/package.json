@@ -1,0 +1,13 @@
+{
+  "name": "air-ticket-api-gateway",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "http-proxy-middleware": "^3.0.5"
+  }
+}

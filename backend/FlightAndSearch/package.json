@@ -1,0 +1,31 @@
+{
+  "name": "flightandsearch",
+  "version": "1.0.0",
+  "description": "microservices for handling FLIGHT CRUD",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx nodemon src/index",
+    "seed:sample-flights": "npx sequelize-cli db:seed --seed 20261025120000-add-daily-sample-flights.js --config src/config/config.json --seeders-path src/seeders",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Manishcs27/FlightAndsearchService.git"
+  },
+  "author": "Manish",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Manishcs27/FlightAndsearchService/issues"
+  },
+  "homepage": "https://github.com/Manishcs27/FlightAndsearchService#readme",
+  "dependencies": {
+    "body-parser": "^2.2.2",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "mysql2": "^3.20.0",
+    "nodemon": "^3.1.14",
+    "sequelize": "^6.37.8",
+    "sequelize-cli": "^6.6.5",
+    "winston": "^3.19.0"
+  }
+}

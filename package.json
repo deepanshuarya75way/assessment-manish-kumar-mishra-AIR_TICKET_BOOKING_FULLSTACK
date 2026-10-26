@@ -1,0 +1,16 @@
+{
+  "name": "air-ticket-project",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "backend/ApiGateway",
+    "frontend"
+  ],
+  "scripts": {
+    "predev": "npm run build --workspace=air-ticket-frontend",
+    "dev": "concurrently -n gateway,auth,flights,booking,reminders -c cyan,blue,green,yellow,magenta \"npm run start --workspace=air-ticket-api-gateway\" \"cd backend/AuthService && npm start\" \"cd backend/FlightAndSearch && npm start\" \"cd backend/BookingService && npm start\" \"cd backend/RemainderService && npm start\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
